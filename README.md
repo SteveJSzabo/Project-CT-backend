@@ -1,7 +1,8 @@
-# Foobar
-<img src="./public/imgs/unicorn.png">
+# Chosen Travelers
+<h1 align="center"><img src="./public/imgs/unicorn.png"></h1>
+
 
 <hr>
 
-Backend Route for Chosen Travelers
+<h5 align="center">Backend Route for Chosen Travelers</h5>
 
