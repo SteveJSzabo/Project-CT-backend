@@ -4,82 +4,80 @@ const Schema = mongoose.Schema;
 const playerclassSchema = new Schema({
 	classId: {
 		type: mongoose.ObjectId,
-		required: true
+		required: true,
 	},
 	name: {
 		type: String,
-		required: true
-	}
+		required: true,
+	},
 });
 
 const focustypeSchema = new Schema({
 	playsId: {
 		type: mongoose.ObjectId,
-		required: true
+		required: true,
 	},
 	name: {
 		type: String,
-		required: true
-	}
-})
+		required: true,
+	},
+});
 
 const playertypeSchema = new Schema({
 	playerTypeId: {
 		type: mongoose.ObjectId,
-		required: true
+		required: true,
 	},
 	name: {
 		type: String,
-		required: true
-	}
+		required: true,
+	},
 });
 
 const clanmemberSchema = new Schema({
 	clanMemberId: {
 		type: mongoose.ObjectId,
-		required: true
+		required: true,
 	},
 	name: {
 		type: String,
-		required: true
+		required: true,
 	},
 	bungie_membershipid: {
 		type: String,
-		require: true
+		require: true,
 	},
 	bungie_clanmembertype: {
 		type: int,
-		require: true
+		require: true,
 	},
 	main_class: {
 		type: PlayerClass,
-		required: true
+		required: true,
 	},
 	focus: {
 		type: [FocusType],
-		required: true
+		required: true,
 	},
 	player_type: {
 		type: PlayerType,
-		required: true
+		required: true,
 	},
 	description: {
 		type: String,
-		requied: true
+		requied: true,
 	},
 	steam_profile: String,
 	youtube_profile: String,
 	twitch_profile: String,
 	player_image: {
 		type: String,
-		required: true
-	}
+		required: true,
+	},
 });
-
-
 
 const PlayerClass = mongoose.model("PlayerClass", playerclassSchema);
 const FocusType = mongoose.model("FocusType", focustypeSchema);
 const PlayerType = mongoose.model("PlayerType", playertypeSchema);
 const ClanMember = mongoose.model("ClanMember", clanmemberSchema);
-module.exports = ClanMember;
+module.exports = { PlayerClass, FocusType, PlayerType, ClanMember };
