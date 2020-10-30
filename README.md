@@ -19,8 +19,8 @@ git clone https://github.com/pouyarezvani/Project-CT-backend.git
 npm i
 ```
 
-<p>Run nodemon and head to localhost:4000, if nodemon isnt installed, install it globally.</p>
+<p>Run ``nodemon`` and head to localhost:4000, if nodemon isnt installed, install it globally.</p>
 
 ```bash
-nodemon
+npm install -g nodemon
 ```
