@@ -1,9 +1,17 @@
 // SECTION Modules
-
 const express = require("express");
 const bodyParser = require("body-parser");
+const path = require('path');
 const app = express();
-const PORT = 4000;
+const dotenv = require('dotenv')
+const colors = require('colors');
+const connectDB = require("./Config/DB");
+// const clanMembers = require('')
+
+const PORT = process.env.PORT || 5000;
+dotenv.config()
+connectDB();
+
 
 // SECTION MiddleWare
 // BodyParser
@@ -31,4 +39,4 @@ app.get("/test", (req, res) => {
 // app.use('/api/v1/users', routes.users);
 
 // SECTION Start Server
-app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Server running in ${process.env.NODE_ENV} mode at http://localhost:${PORT}`.yellow.underline.bold));
