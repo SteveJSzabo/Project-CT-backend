@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Bowlby+One+SC&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC&display=swap');
 body {
 	/* height: 80vh; */
 	background: #030303;
 }
 .container {
-	height: 80vh;
+	height: 50vh;
 }
 .row {
 	position: relative;
@@ -14,7 +14,7 @@ body {
 h1,
 h2 {
 	color: white;
-	font-family: "Bowlby One SC", cursive;
+	font-family: 'Bowlby One SC', cursive;
 }
 h5 {
 	color: white;

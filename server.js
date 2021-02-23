@@ -6,7 +6,6 @@ const app = express();
 const dotenv = require('dotenv')
 const colors = require('colors');
 const connectDB = require("./Config/DB");
-// const clanMembers = require('')
 
 const PORT = process.env.PORT || 5000;
 dotenv.config()
@@ -29,14 +28,19 @@ app.use((req, res, next) => {
 
 // SECTION Routes
 app.get("/", (req, res) => {
+	res.sendFile(`${__dirname}/pages/back-end.html`);
+});
+app.get("/home", (req, res) => {
 	res.sendFile(`${__dirname}/pages/index.html`);
+});
+app.get("/our-clan", (req, res) => {
+	res.sendFile(`${__dirname}/pages/our-clan.html`);
 });
 
 app.get("/test", (req, res) => {
 	res.send("Sending from server. ");
 });
 
-// app.use('/api/v1/users', routes.users);
-
 // SECTION Start Server
-app.listen(PORT, () => console.log(`Server running in ${process.env.NODE_ENV} mode at http://localhost:${PORT}`.yellow.underline.bold));
+app.listen(PORT, () => console.log(
+	`Server running in ${process.env.NODE_ENV} mode at http://localhost:${PORT}`.yellow.underline.bold));

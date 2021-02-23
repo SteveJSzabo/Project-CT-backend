@@ -4,25 +4,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Chosen Travelers Backend</title>
+    <title>Chosen Travelers</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- <link rel='icon' href='favicon.ico' type='Images/favicon-32x32.png' /> -->
+    <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="https://use.fontawesome.com/1d2dcdda2f.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-md-12">
-                <h1>This is The Backend Server for Chosen Travelers</h1>
-                <img src="/imgs/giphy.gif" alt="">
-                <h2>Shh.. Things are in Development</h2>
-                <h5>To see the api route go to : <a href="#.">api/...</a></h5>
+    <nav class="navbar navbar-expand-lg navbar-dark static-top">
+        <div class="container">
+            <a class="navbar-brand" href="./index">
+                <img src="Images/logo.gif" alt="">
+            </a>
+            <div class="row text-center main-title ml-5">
+                <div class="col-md-12">
+                    <h1>Chosen Travelers</h1>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item li-home">
+                        <a class="nav-link" href="./index"> Home</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link inactiveLink d-lg-block d-none" href="">|</a></li>
+                    <li class="nav-item li-our-clan">
+                        <a class="nav-link" href="./our-clan">Our Clan </a>
+                    </li>
 
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="j1 px-lg-5">
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <div class="col-sm-4 col-5 text-center lastcol my-auto">
+                    <h3>Join Our Discord: </h3>
+                    <a target="_blank" href="https://discord.gg/FKqjMkX9r8">
+                        <img src="Images/Discord_Red_Logo.png" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 col-2">
+
+                </div>
+                <div class="col-sm-4 col-5 text-center lastcol apply-section my-auto">
+                    <h3 class="pb-4">Apply To Our Clan: </h3>
+                    <a target="_blank" href="https://forms.gle/2zZWcMxcoenS7Nfa6" id="topics"
+                        class="apply-a btn btn-danger my-2">Apply here</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container lead-background">
+        <div class="row text-center p-5">
+            <div class="col-md-12">
+                <h2>Welcome to the official site of the Chosen Travelers <br>Destiny 2 Clan,
+                    home to Guardians from all walks of life. With a focus on both PvP and PvE, we work as one to
+                    reach the endgame.</h2>
             </div>
         </div>
     </div>
+
+
+    <div class="container">
+        <div class="row text-center py-5 px-3 CT-title-row">
+            <div class="col-md-12 CT-title">
+                <h2>What Chosen Travelers Focus On </h2>
+            </div>
+        </div>
+        <div class="row pve-row border-top py-4">
+            <div class="col-md-6 my-auto py-3">
+                <h3>PvE</h3>
+                <p>Destiny's sandbox is wide and varied, ranging from large-scale public events to
+                    playlist activities. No matter the focus, our goal as a clan is to work together to
+                    achieve success, bringing fellow clan members together to have a great time across
+                    all seasons and all holiday events.</p>
+            </div>
+            <div class="col-md-6 pve-image py-3">
+                <img src="Images/pve-image.png" alt="">
+            </div>
+        </div>
+        <div class="row pve-row py-4">
+            <div class="col-md-6 pvp-text my-auto py-3 d-md-none">
+                <h3>PvP</h3>
+                <p>Whether casual Quickplay or high-intensity comp, Chosen Travelers is home to
+                    skilled PvP players ready and willing to support each other in the Crucible. Working
+                    as a six-stack or a three-stack, we push for victory as one!</p>
+            </div>
+            <div class="col-md-6 pvp-image my-auto py-3">
+                <img src="Images/pvp-image.jpg" alt="">
+            </div>
+            <div class="col-md-6 pvp-text my-auto py-3 d-md-block d-none">
+                <h3>PvP</h3>
+                <p>Whether casual Quickplay or high-intensity comp, Chosen Travelers is home to
+                    skilled PvP players ready and willing to support each other in the Crucible. Working
+                    as a six-stack or a three-stack, we push for victory as one!</p>
+            </div>
+
+        </div>
+        <div class="row pve-row end-game-row py-4">
+            <div class="col-md-6 my-auto py-3">
+                <h3>Endgame</h3>
+                <p>Destiny 2's endgame comprises everything from three-man Grandmaster Nightfalls
+                    to six-man raids and, if duels are what we're after, the ultimate PvP conquest of Trials. As a
+                    united clan, we work together to reach the pinnacle endgame of
+                    Destiny 2! </p>
+            </div>
+            <div class="col-md-6 pvp-image my-auto py-3">
+                <img src="Images/end-game.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid paralax-row-before-footer">
+    </div>
+
+
+
+    <div class="container">
+
+        <footer class="pt-4 my-md-5 pt-md-5">
+            <div class="row footer-li">
+                <div class="col-12 col-md footer-logo">
+                    <img src="Images/logo.gif" alt="">
+                    <!-- <small class="d-block  text-muted">© 2017-2018</small> -->
+                </div>
+                <div class="col-sm-6 col-md">
+                    <h5>Our Focus</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#topics">What we do</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md">
+                    <h5>Discord</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a target="_blank" class="text-muted" href="https://discord.gg/xHnkMt">Join our Discord</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md">
+                    <h5>Clan</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a target="_blank" class="text-muted" href="https://forms.gle/2zZWcMxcoenS7Nfa6">Clan
+                                Application</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <p class="mb-0">Developed by <a target="_blank" href="https://github.com/pouyarezvani">Ashby</a>
+                    </p> <br>
+                    <p class="mb-0">@2020 All rights reserved.</p>
+
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- <script src="https://use.fontawesome.com/969c90d925.js"></script> -->
+    <!-- <script src="scripts.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>
