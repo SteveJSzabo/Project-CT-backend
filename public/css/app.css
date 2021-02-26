@@ -1,177 +1,177 @@
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 body {
-	background-color: #222;
-	font-family: 'Montserrat', sans-serif;
-	color: white;
+  background-color: #222;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
 }
 ::-webkit-scrollbar {
-	width: 8px;
+  width: 8px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 5px grey;
-	border-radius: 10px;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: red;
-	border-radius: 10px;
+  background: red;
+  border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-	background: #b30000;
+  background: #b30000;
 }
 
 /* ===================== Navbar */
 
 .navbar {
-	top: 0;
-	z-index: 100;
-	position: sticky;
-	position: -webkit-sticky;
-	width: 100%;
-	box-shadow: 0 0.5rem 1.5rem rgba(172, 172, 172, 0.1);
-	background-color: #222 !important;
-	height: 60px;
-	opacity: 0.9;
+  top: 0;
+  z-index: 100;
+  position: sticky;
+  position: -webkit-sticky;
+  width: 100%;
+  box-shadow: 0 0.5rem 1.5rem rgba(172, 172, 172, 0.1);
+  background-color: #222 !important;
+  height: 60px;
+  opacity: 0.9;
 }
 .navbar-brand img {
-	width: 35%;
-	height: auto;
-	margin-top: 20px;
+  width: 35%;
+  height: auto;
+  margin-top: 20px;
 }
 
 .navbar-nav li a {
-	color: red !important;
-	font-size: 25px;
-	font-family: 'Aldrich', sans-serif;
+  color: red !important;
+  font-size: 25px;
+  font-family: 'Aldrich', sans-serif;
 }
 .main-title {
-	font-family: 'Aldrich', sans-serif;
+  font-family: 'Aldrich', sans-serif;
 }
 .main-title h1 {
-	margin-left: 60px;
-	font-family: 'Aldrich', sans-serif;
+  margin-left: 60px;
+  font-family: 'Aldrich', sans-serif;
 }
 .lead {
-	line-height: 1.6;
-	font-size: 20px;
-	width: 70%;
+  line-height: 1.6;
+  font-size: 20px;
+  width: 70%;
 }
 
 .inactiveLink {
-	pointer-events: none;
-	cursor: default;
+  pointer-events: none;
+  cursor: default;
 }
 
 .navbar-nav li a:hover {
-	transition: 0.05s;
-	color: white !important;
+  transition: 0.05s;
+  color: white !important;
 }
 .nav-item {
-	background-color: #222 !important;
-	padding: 0px 8px;
+  background-color: #222 !important;
+  padding: 0px 8px;
 }
 
 /* ===================== JumboTron */
 .jumbotron-home {
-	height: 65vh;
-	background-color: #191919;
-	/* background-image: url('./traveler-bg.gif'); */
-	background-position: 45% 55%;
+  height: 65vh;
+  background-color: #191919;
+  /* background-image: url('./traveler-bg.gif'); */
+  background-position: 45% 55%;
 }
 
 .j1 {
-	height: 65vh;
-	background-color: #191919;
-	background-image: url('../Images/traveler-bg.gif');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+  height: 65vh;
+  background-color: #191919;
+  background-image: url('../Images/traveler-bg.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .j1 p {
-	text-align: left;
-	color: white !important;
+  text-align: left;
+  color: white !important;
 }
 .lastcol img {
-	max-width: 110px;
-	height: auto;
+  max-width: 110px;
+  height: auto;
 }
 
 .jumbotron-about {
-	background-image: url('../Images/gaurdians.jpg');
-	background-size: cover;
-	background-attachment: fixed;
-	height: 65vh;
-	/* background-position: center; */
+  background-image: url('../Images/gaurdians.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  height: 65vh;
+  /* background-position: center; */
 }
 
 .apply-a {
-	padding: 15px;
-	margin: 20px;
-	width: 150px;
-	background-color: #ce0003;
+  padding: 15px;
+  margin: 20px;
+  width: 150px;
+  background-color: #ce0003;
 }
 .apply-a:hover {
-	background-color: #6f0305;
-	color: white;
-	border: #6f0305;
+  background-color: #6f0305;
+  color: white;
+  border: #6f0305;
 }
 
 /* ===================== BODY */
 .CT-title {
-	font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .CT-title-row {
-	padding-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 .lead-background {
-	background-image: url('../Images/lead-background.jpg');
-	background-position: 50% 50%;
-	background-size: cover;
-	margin-top: 40px;
-	border-radius: 30px;
-	background-attachment: fixed;
-	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  background-image: url('../Images/lead-background.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  margin-top: 40px;
+  border-radius: 30px;
+  background-attachment: fixed;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 .lead-background .row .col-md-12 {
-	margin-top: 20px;
+  margin-top: 20px;
 }
 .pvp-image img {
-	width: 100%;
-	height: auto;
-	border-radius: 10px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .pve-image img {
-	width: 100%;
-	height: auto;
-	/* border: 1px solid white; */
-	border-radius: 10px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 100%;
+  height: auto;
+  /* border: 1px solid white; */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .pvp-row {
-	text-align: right;
+  text-align: right;
 }
 
 /* ===================== About  */
 .card {
-	color: black;
-	border: none;
-	position: relative;
-	border-radius: 10px 10px 10px 10px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+  color: black;
+  border: none;
+  position: relative;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
 }
 .card-img-top {
-	height: 480px;
-	border-radius: 10px 10px 0 0;
+  height: 480px;
+  border-radius: 10px 10px 0 0;
 }
 /* .card:hover {
 	border: 2px solid #ff10fb;
@@ -180,125 +180,125 @@ body {
 } */
 
 .card-body {
-	height: 320px;
-	background-color: #dcdcdc;
-	border-top: 1px solid black;
-	border-radius: 0 0 10px 10px;
+  height: 320px;
+  background-color: #dcdcdc;
+  border-top: 1px solid black;
+  border-radius: 0 0 10px 10px;
 }
 
 .steam-logo {
-	position: absolute;
-	bottom: 20px;
+  position: absolute;
+  bottom: 20px;
 }
 .steam-logo-grey {
-	bottom: 5px;
+  bottom: 5px;
 }
 
 .steam-logo img {
-	width: 50px;
-	height: 50px;
+  width: 50px;
+  height: 50px;
 }
 .yt-logo {
-	width: 100px !important;
-	height: auto !important;
+  width: 100px !important;
+  height: auto !important;
 }
 
 .h2-name-founder {
-	color: #ff1493;
+  color: #ff1493;
 }
 .h2-name-admin {
-	color: red;
+  color: red;
 }
 .our-clan-titles {
-	color: red;
+  color: red;
 }
 .our-clan-title-founder {
-	color: #ff1493;
+  color: #ff1493;
 }
 /* ===================== Footer */
 
 .paralax-row-before-footer {
-	background-image: url('../Images/Destiny\ 2\ Guardians\ Banner.jpg');
-	height: 50vh;
-	background-attachment: fixed;
-	background-size: cover;
-	background-position: 50% 50%;
+  background-image: url('../Images/Destiny\ 2\ Guardians\ Banner.jpg');
+  height: 50vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 .footer-logo img {
-	width: 50%;
-	height: auto;
-	max-width: 200px;
+  width: 50%;
+  height: auto;
+  max-width: 200px;
 }
 
 @media only screen and (max-width: 1100px) {
-	.j1 {
-		height: 500px !important;
-	}
-	.main-title {
-		display: none;
-	}
+  .j1 {
+    height: 500px !important;
+  }
+  .main-title {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 767px) {
-	.main-title h1 {
-		display: none;
-	}
-	.navbar {
-		height: 90px;
-	}
-	.j1 {
-		height: 250px !important;
-	}
-	.j1 h1 {
-		font-size: 14px;
-	}
-	.j1 p {
-		font-size: 10px;
-	}
-	.j1 h3 {
-		font-size: 12px;
-	}
-	/* .lastcol {
+  .main-title h1 {
+    display: none;
+  }
+  .navbar {
+    height: 90px;
+  }
+  .j1 {
+    height: 250px !important;
+  }
+  .j1 h1 {
+    font-size: 14px;
+  }
+  .j1 p {
+    font-size: 10px;
+  }
+  .j1 h3 {
+    font-size: 12px;
+  }
+  /* .lastcol {
 		margin-top: 45px !important;
 	} */
-	.apply-section h3 {
-		padding-bottom: 0 !important;
-	}
-	/* .lead {
+  .apply-section h3 {
+    padding-bottom: 0 !important;
+  }
+  /* .lead {
 		line-height: 1.1;
 		font-size: 12px !important;
 		width: 90%;
 	} */
-	.lead-background .row .col-md-12 h2 {
-		font-size: 18px !important;
-		width: 100%;
-	}
-	.lead-background .row .col-md-12 {
-		margin-top: 1px !important;
-	}
-	.lastcol img {
-		max-width: 40px;
-	}
-	.apply-a {
-		padding: 5px 10px;
-		margin: 0px;
-		width: fit-content;
-		font-size: 10px;
-	}
+  .lead-background .row .col-md-12 h2 {
+    font-size: 18px !important;
+    width: 100%;
+  }
+  .lead-background .row .col-md-12 {
+    margin-top: 1px !important;
+  }
+  .lastcol img {
+    max-width: 40px;
+  }
+  .apply-a {
+    padding: 5px 10px;
+    margin: 0px;
+    width: fit-content;
+    font-size: 10px;
+  }
 
-	.paralax-row-before-footer {
-		height: 30vh;
-		background-attachment: inherit;
-		background-size: contain;
-		background-position: center;
-		background-repeat: no-repeat;
-	}
-	.footer-logo img {
-		max-width: 100px;
-		margin-bottom: 30px;
-	}
-	.footer-li div {
-		text-align: center !important;
-	}
+  .paralax-row-before-footer {
+    height: 30vh;
+    background-attachment: inherit;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .footer-logo img {
+    max-width: 100px;
+    margin-bottom: 30px;
+  }
+  .footer-li div {
+    text-align: center !important;
+  }
 }
