@@ -1,0 +1,45 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+  <ul class="nav">
+    <li class="nav-item nav-profile">
+      <a href="/profile" class="nav-link">
+        <div class="profile-image">
+          <img
+            class="img-xs rounded-circle"
+            src="<%= `/Images/users/${authUser.avatar}` %>"
+            alt="profile image"
+          />
+          <div class="dot-indicator bg-success"></div>
+        </div>
+        <div class="text-wrapper">
+          <p class="profile-name"><%= `${authUser.name}` %></p>
+          <p class="designation"><%= `${authUser.role}` %></p>
+        </div>
+      </a>
+    </li>
+    <% if(authUser.role === 'superadmin' || authUser.role === 'admin'){ %>
+    <li class="nav-item nav-category">Main Menu</li>
+
+    <% if(authUser.role === 'superadmin'){ %>
+    <li class="nav-item">
+      <a class="nav-link" href="/admin/users/superadmins">
+        <i class="menu-icon typcn typcn-shopping-bag"></i>
+        <span class="menu-title">Super Admin</span>
+      </a>
+    </li>
+    <% } %>
+
+    <li class="nav-item">
+      <a class="nav-link" href="/admin/users/admins">
+        <i class="menu-icon typcn typcn-shopping-bag"></i>
+        <span class="menu-title">Normal Admin</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/admin/users/members">
+        <i class="menu-icon typcn typcn-shopping-bag"></i>
+        <span class="menu-title">Clan Members</span>
+      </a>
+    </li>
+    <% } %>
+  </ul>
+</nav>
