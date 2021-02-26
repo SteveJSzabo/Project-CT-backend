@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chosen Travelers</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="//Images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/app.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark static-top">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/Images/logo.gif" alt="" />
+        </a>
+        <div class="row text-center main-title ml-5">
+          <div class="col-md-12">
+            <h1>Chosen Travelers</h1>
+          </div>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/"> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link inactiveLink d-lg-block d-none" href="">|</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/our-clan">Our Clan </a>
+            </li>
+            <li class="nav-item li-our-clan">
+              <a class="nav-link" href="/login">Login </a>
+            </li>
+
+            <!-- <li class="nav-item">
+                        <a class="nav-link" href="./test.html">test</a>
+                    </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="jumbotron jumbotron-about text-center">
+      <div class="container"></div>
+    </section>
+
+    <div class="album py-5">
+      <div class="container">
+        <div class="row text-center pb-5">
+          <div class="col-md-12">
+            <h1 class="our-clan-title-founder">FOUNDERS</h1>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <% superadmins.forEach(function(superadmin){ %>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img
+                class="card-img-top"
+                src="<%= `/Images/users/${superadmin.avatar}` %>"
+                alt="Card image cap"
+              />
+              <div class="card-body text-center">
+                <h2 class="h2-name-founder"><%= superadmin.name%></h2>
+                <p>
+                  Main: <%= superadmin.main_class%> <br />
+                  Plays: <%= superadmin.focus%> <br />
+                  Player Type: <%= superadmin.player_type%>
+                </p>
+                <p class="card-text"><%= superadmin.description%></p>
+                <div class="d-flex justify-content-center">
+                  <div class="steam-logo">
+                    <a target="_blank" href="<%= superadmin.steam_profile%>"
+                      ><img src="/Images/steam-logo.png" alt=""
+                    /></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% }); %>
+        </div>
+        <div class="row text-center p-4">
+          <div class="col-md-12 p-4 border-top">
+            <h1 class="our-clan-titles">Admin</h1>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <% admins.forEach(function(admin){ %>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img
+                class="card-img-top"
+                src="<%= `/Images/users/${admin.avatar}` %>"
+                alt="Card image cap"
+              />
+              <div class="card-body text-center">
+                <h2 class="h2-name-admin"><%= admin.name%></h2>
+                <p>
+                  Main: <%= admin.main_class%> <br />
+                  Plays: <%= admin.focus%> <br />
+                  Player Type: <%= admin.player_type%>
+                </p>
+                <p class="card-text"><%= admin.description%></p>
+                <div class="d-flex justify-content-center">
+                  <div class="steam-logo">
+                    <a target="_blank" href="<%= admin.steam_profile%>"
+                      ><img src="/Images/steam-logo.png" alt=""
+                    /></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% }); %>
+        </div>
+        <div class="row text-center p-5">
+          <di class="col-md-12 p-4 border-top">
+            <h1 class="">TRAVELERS</h1>
+          </di>
+        </div>
+
+        <div class="row">
+          <% members.forEach(function(member){ %>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img
+                class="card-img-top"
+                src="<%= `/Images/users/${member.avatar}` %>"
+                alt="Card image cap"
+              />
+              <div class="card-body text-center">
+                <h2><%= member.name%></h2>
+                <p>
+                  Main: <%= member.main_class%> <br />
+                  Plays: <%= member.focus%> <br />
+                  Player Type: <%= member.player_type%>
+                </p>
+                <p class="card-text"><%= member.description%></p>
+                <div class="d-flex justify-content-center">
+                  <div class="steam-logo">
+                    <a target="_blank" href="<%= member.steam_profile%>"
+                      ><img src="/Images/steam-logo.png" alt=""
+                    /></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% }); %>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row footer-li">
+          <div class="col-12 col-md footer-logo">
+            <img src="/Images/logo.gif" alt="" />
+            <!-- <small class="d-block  text-muted">© 2017-2018</small> -->
+          </div>
+          <div class="col-6 col-md">
+            <h5>Our Focus</h5>
+            <ul class="list-unstyled text-small">
+              <li>
+                <a
+                  class="text-muted"
+                  href="https://chosentravelers.com/home.html#topics"
+                  >What we do</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Discord</h5>
+            <ul class="list-unstyled text-small">
+              <li>
+                <a
+                  target="_blank"
+                  class="text-muted"
+                  href="https://discord.gg/xHnkMt"
+                  >Join our Discord</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Clan</h5>
+            <ul class="list-unstyled text-small">
+              <li>
+                <a
+                  target="_blank"
+                  class="text-muted"
+                  href="https://forms.gle/2zZWcMxcoenS7Nfa6"
+                  >Clan Application</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-12">
+            <p class="mb-0">
+              Developed by
+              <a target="_blank" href="https://github.com/pouyarezvani"
+                >Ashby</a
+              >
+            </p>
+            <br />
+            <p class="mb-0">@2020 All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
