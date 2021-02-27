@@ -121,6 +121,13 @@ exports.protect = catchAsync(async (req, res, next) => {
     );
   }
 
+  // 4) Check if user changed password after the token was issued
+  if (currentUser.passwordChangeAfter(decoded.iat)) {
+    return next(
+      new AppError('Your password recently changed! Please log in again.', 401)
+    );
+  }
+
   // GRANT ACCESS TO PROTECTED ROUTE
   req.user = currentUser;
 
@@ -153,6 +160,11 @@ exports.isLoggedIn = async (req, res, next) => {
       // 2) Check if user still exists
       const currentUser = await User.findById(decoded.id);
       if (!currentUser) {
+        return res.render('login');
+      }
+
+      // 3) Check if user changed password after the token was issued
+      if (currentUser.passwordChangeAfter(decoded.iat)) {
         return res.render('login');
       }
 
