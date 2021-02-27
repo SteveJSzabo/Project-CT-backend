@@ -1,3 +1,4 @@
+const bcrypt = require('bcryptjs');
 const User = require('../Models/userModel');
 const factory = require('./handlerFactory');
 const catchAsync = require('../utils/catchAsync');
@@ -66,6 +67,18 @@ exports.setUserAvatarUrl = (req, res, next) => {
   next();
 };
 
+// Superadmin and admin can edit password member password
+exports.editPassword = catchAsync(async (req, res, next) => {
+  if (req.body.password) {
+    req.body.plain_password = req.body.password;
+
+    req.body.password = await bcrypt.hash(req.body.password, 12);
+    req.body.passwordChangeAt = Date.now() - 1000;
+  }
+
+  next();
+});
+
 /**
  * @desc    Get all user list
  * @route   GET /api/users
@@ -107,18 +120,45 @@ exports.deleteUser = factory.deleteOne(User);
  * @access  Private
  */
 exports.updateMe = catchAsync(async (req, res, next) => {
-  const filteredBody = filterObj(
-    req.body,
-    'name',
-    'avatar',
-    'main_class',
-    'focus',
-    'player_type',
-    'description',
-    'steam_profile',
-    'youtube_profile',
-    'twitch_profile'
-  );
+  let filteredBody;
+  if (req.user.role === 'superadmin' || req.user.role === 'admin') {
+    if (req.body.password) {
+      req.body.plain_password = req.body.password;
+
+      req.body.password = await bcrypt.hash(req.body.password, 12);
+      req.body.passwordChangeAt = Date.now() - 1000;
+    }
+
+    filteredBody = filterObj(
+      req.body,
+      'name',
+      'username',
+      'password',
+      'plain_password',
+      'passwordChangeAt',
+      'avatar',
+      'main_class',
+      'focus',
+      'player_type',
+      'description',
+      'steam_profile',
+      'youtube_profile',
+      'twitch_profile'
+    );
+  } else {
+    filteredBody = filterObj(
+      req.body,
+      'name',
+      'avatar',
+      'main_class',
+      'focus',
+      'player_type',
+      'description',
+      'steam_profile',
+      'youtube_profile',
+      'twitch_profile'
+    );
+  }
 
   const updatedUser = await User.findByIdAndUpdate(req.user.id, filteredBody, {
     new: true,

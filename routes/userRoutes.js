@@ -37,6 +37,7 @@ router
     imageUpload.uploadUserAvatar,
     imageUpload.resizeUserAvatar,
     userController.setUserAvatarUrl,
+    userController.editPassword,
     userController.updateUser
   )
   .delete(userController.filterForAdmin, userController.deleteUser);

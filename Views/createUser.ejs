@@ -83,7 +83,7 @@
                     <div class="form-group">
                       <label for="password">Password</label>
                       <input
-                        type="password"
+                        type="text"
                         class="form-control"
                         id="password"
                         placeholder="Enter password"
@@ -113,30 +113,28 @@
                     </div>
                     <div class="form-group">
                       <label for="main_class">Main class</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="main_class"
-                        placeholder="Enter main class"
-                      />
+                      <select class="form-control" id="main_class">
+                        <option value="Titan">Titan</option>
+                        <option value="Hunter">Hunter</option>
+                        <option value="Warlock">Warlock</option>
+                      </select>
                     </div>
                     <div class="form-group">
                       <label for="focus">Focus</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="focus"
-                        placeholder="Enter focus"
-                      />
+                      <select class="form-control" id="focus">
+                        <option value="PVE">PVE</option>
+                        <option value="PVP">PVP</option>
+                        <option value="PVE & PVP">PVE & PVP</option>
+                      </select>
                     </div>
                     <div class="form-group">
                       <label for="player_type">Player type</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="player_type"
-                        placeholder="Enter player type"
-                      />
+                      <select class="form-control" id="player_type">
+                        <option value="Semi-Casual">Semi-Casual</option>
+                        <option value="Casual">Casual</option>
+                        <option value="Semi-Hardcore">Semi-Hardcore</option>
+                        <option value="Hardcore">Hardcore</option>
+                      </select>
                     </div>
                     <div class="form-group">
                       <label for="description">Description</label>

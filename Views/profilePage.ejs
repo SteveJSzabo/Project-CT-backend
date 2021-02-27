@@ -73,34 +73,52 @@
                       />
                     </div>
                     <div class="form-group">
-                      <label for="main_class">Main class</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="main_class"
-                        placeholder="Enter main class"
-                        value="<%= `${user.main_class}` %>"
+                      <label for="username">Username</label>
+                      <input type="text" class="form-control" id="username"
+                      placeholder="Enter username" value="<%= `${user.username}`
+                      %>" <% if(authUser.role === 'member'){ %> readonly <% } %>
                       />
+                    </div>
+                    <div class="form-group">
+                      <label for="password">Password</label>
+                      <input type="text" class="form-control" id="password"
+                      placeholder="Enter password" value="<%=
+                      `${user.plain_password}` %>" <% if(authUser.role ===
+                      'member'){ %> readonly <% } %> />
+                    </div>
+                    <div class="form-group">
+                      <label for="main_class">Main class</label>
+                      <select class="form-control" id="main_class">
+                        <option value="<%= `${user.main_class}` %>">
+                          <%= `${user.main_class}` %>
+                        </option>
+                        <option value="Titan">Titan</option>
+                        <option value="Hunter">Hunter</option>
+                        <option value="Warlock">Warlock</option>
+                      </select>
                     </div>
                     <div class="form-group">
                       <label for="focus">Focus</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="focus"
-                        placeholder="Enter focus"
-                        value="<%= `${user.focus}` %>"
-                      />
+                      <select class="form-control" id="focus">
+                        <option value="<%= `${user.focus}` %>">
+                          <%= `${user.focus}` %>
+                        </option>
+                        <option value="PVE">PVE</option>
+                        <option value="PVP">PVP</option>
+                        <option value="PVE & PVP">PVE & PVP</option>
+                      </select>
                     </div>
                     <div class="form-group">
                       <label for="player_type">Player type</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="player_type"
-                        placeholder="Enter player type"
-                        value="<%= `${user.player_type}` %>"
-                      />
+                      <select class="form-control" id="player_type">
+                        <option value="<%= `${user.player_type}` %>">
+                          <%= `${user.player_type}` %>
+                        </option>
+                        <option value="Semi-Casual">Semi-Casual</option>
+                        <option value="Casual">Casual</option>
+                        <option value="Semi-Hardcore">Semi-Hardcore</option>
+                        <option value="Hardcore">Hardcore</option>
+                      </select>
                     </div>
                     <div class="form-group">
                       <label for="description">Description</label>

@@ -42,9 +42,25 @@ if (userCreateForm) {
     const bungie_clanmember_type = document.getElementById(
       'bungie_clanmember_type'
     ).value;
-    const main_class = document.getElementById('main_class').value;
-    const focus = document.getElementById('focus').value;
-    const player_type = document.getElementById('player_type').value;
+
+    let main_class;
+    const mainSelector = document.querySelector('#main_class');
+    if (mainSelector) {
+      main_class = mainSelector.options[mainSelector.selectedIndex].value;
+    }
+
+    let focus;
+    const focusSelector = document.querySelector('#focus');
+    if (focusSelector) {
+      focus = focusSelector.options[focusSelector.selectedIndex].value;
+    }
+
+    let player_type;
+    const typeSelector = document.querySelector('#player_type');
+    if (typeSelector) {
+      player_type = typeSelector.options[typeSelector.selectedIndex].value;
+    }
+
     const description = document.getElementById('description').value;
     const steam_profile = document.getElementById('steam_profile').value;
     const youtube_profile = document.getElementById('youtube_profile').value;
@@ -62,9 +78,9 @@ if (userCreateForm) {
     form.append('password', password);
     form.append('bungie_membership_id', bungie_membership_id);
     form.append('bungie_clanmember_type', bungie_clanmember_type);
-    form.append('main_class', main_class);
-    form.append('focus', focus);
-    form.append('player_type', player_type);
+    if (main_class) form.append('main_class', main_class);
+    if (focus) form.append('focus', focus);
+    if (player_type) form.append('player_type', player_type);
     form.append('description', description);
     form.append('steam_profile', steam_profile);
     form.append('youtube_profile', youtube_profile);
@@ -82,14 +98,32 @@ if (userEditForm) {
     e.preventDefault();
 
     const name = document.getElementById('name').value;
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
     const bungie_membership_id = document.getElementById('bungie_membership_id')
       .value;
     const bungie_clanmember_type = document.getElementById(
       'bungie_clanmember_type'
     ).value;
-    const main_class = document.getElementById('main_class').value;
-    const focus = document.getElementById('focus').value;
-    const player_type = document.getElementById('player_type').value;
+
+    let main_class;
+    const mainSelector = document.querySelector('#main_class');
+    if (mainSelector) {
+      main_class = mainSelector.options[mainSelector.selectedIndex].value;
+    }
+
+    let focus;
+    const focusSelector = document.querySelector('#focus');
+    if (focusSelector) {
+      focus = focusSelector.options[focusSelector.selectedIndex].value;
+    }
+
+    let player_type;
+    const typeSelector = document.querySelector('#player_type');
+    if (typeSelector) {
+      player_type = typeSelector.options[typeSelector.selectedIndex].value;
+    }
+
     const description = document.getElementById('description').value;
     const steam_profile = document.getElementById('steam_profile').value;
     const youtube_profile = document.getElementById('youtube_profile').value;
@@ -105,11 +139,13 @@ if (userEditForm) {
 
     const form = new FormData();
     form.append('name', name);
+    form.append('username', username);
+    form.append('password', password);
     form.append('bungie_membership_id', bungie_membership_id);
     form.append('bungie_clanmember_type', bungie_clanmember_type);
-    form.append('main_class', main_class);
-    form.append('focus', focus);
-    form.append('player_type', player_type);
+    if (main_class) form.append('main_class', main_class);
+    if (focus) form.append('focus', focus);
+    if (player_type) form.append('player_type', player_type);
     form.append('description', description);
     form.append('steam_profile', steam_profile);
     form.append('youtube_profile', youtube_profile);
@@ -130,9 +166,27 @@ if (profileEditForm) {
     e.preventDefault();
 
     const name = document.getElementById('name').value;
-    const main_class = document.getElementById('main_class').value;
-    const focus = document.getElementById('focus').value;
-    const player_type = document.getElementById('player_type').value;
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    let main_class;
+    const mainSelector = document.querySelector('#main_class');
+    if (mainSelector) {
+      main_class = mainSelector.options[mainSelector.selectedIndex].value;
+    }
+
+    let focus;
+    const focusSelector = document.querySelector('#focus');
+    if (focusSelector) {
+      focus = focusSelector.options[focusSelector.selectedIndex].value;
+    }
+
+    let player_type;
+    const typeSelector = document.querySelector('#player_type');
+    if (typeSelector) {
+      player_type = typeSelector.options[typeSelector.selectedIndex].value;
+    }
+
     const description = document.getElementById('description').value;
     const steam_profile = document.getElementById('steam_profile').value;
     const youtube_profile = document.getElementById('youtube_profile').value;
@@ -141,9 +195,11 @@ if (profileEditForm) {
 
     const form = new FormData();
     form.append('name', name);
-    form.append('main_class', main_class);
-    form.append('focus', focus);
-    form.append('player_type', player_type);
+    form.append('username', username);
+    form.append('password', password);
+    if (main_class) form.append('main_class', main_class);
+    if (focus) form.append('focus', focus);
+    if (player_type) form.append('player_type', player_type);
     form.append('description', description);
     form.append('steam_profile', steam_profile);
     form.append('youtube_profile', youtube_profile);
